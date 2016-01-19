@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="mystyle.css">
+	<SCRIPT SRC="myjavascript.js"></SCRIPT>
+</head>
+<body>
+<div id="sudoku">
+	<h1>Level: Easy</h1>
+</div>
+<div>
+	<ul id="level">
+		<li><button onclick="initializeSudoku(); randomMachado(); makeSudoku(); startCount()">Begin</button>
+		</li>
+	</ul>
+</div>
+<div>
+	<input id="tim" type="text" >
+</div>
+<div>
+	<table>
+		<tr>
+			<td><input id="d00" class="hook" type="text" maxlength="1" value=""></input></td><td><input id="d01" class="hook" type="text" maxlength="1" value=""></input></td><td><input id="d02" class="hook" type="text" maxlength="1" value=""></input></td><td><input id="d03" class="hook" type="text" maxlength="1" value=""></input></td><td><input id="d04" class="hook" type="text" maxlength="1" value=""></input></td><td><input id="d05" class="hook" type="text" maxlength="1" value=""></input></td><td><input id="d06" class="hook" type="text" maxlength="1" value=""></input></td><td><input id="d07" class="hook" type="text" maxlength="1" value=""></input></td><td><input id="d08" class="hook" type="text" maxlength="1" value=""></input></td>
+	    </tr>
+	    <tr>
+			<td><input id="d10" class="hook" type="text" maxlength="1" value=""></input></td><td><input id="d11" class="hook" type="text" maxlength="1" value=""></input></td><td><input id="d12" class="hook" type="text" maxlength="1" value=""></input></td><td><input id="d13" class="hook" type="text" maxlength="1" value=""></input></td><td><input id="d14" class="hook" type="text" maxlength="1" value=""></input></td><td><input id="d15" class="hook" type="text" maxlength="1" value=""></input></td><td><input id="d16" class="hook" type="text" maxlength="1" value=""></input></td><td><input id="d17" class="hook" type="text" maxlength="1" value=""></input></td><td><input id="d18" class="hook" type="text" maxlength="1" value=""></input></td>
+	    </tr>
+	    <tr>
+			<td><input id="d20" class="hook" type="text" maxlength="1" value=""></input></td><td><input id="d21" class="hook" type="text" maxlength="1" value=""></input></td><td><input id="d22" class="hook" type="text" maxlength="1" value=""></input></td><td><input id="d23" class="hook" type="text" maxlength="1" value=""></input></td><td><input id="d24" class="hook" type="text" maxlength="1" value=""></input></td><td><input id="d25" class="hook" type="text" maxlength="1" value=""></input></td><td><input id="d26" class="hook" type="text" maxlength="1" value=""></input></td><td><input id="d27" class="hook" type="text" maxlength="1" value=""></input></td><td><input id="d28" class="hook" type="text" maxlength="1" value=""></input></td>
+	    </tr>
+	    <tr>
+			<td><input id="d30" class="hook" type="text" maxlength="1" value=""></input></td><td><input id="d31" class="hook" type="text" maxlength="1" value=""></input></td><td><input id="d32" class="hook" type="text" maxlength="1" value=""></input></td><td><input id="d33" class="hook" type="text" maxlength="1" value=""></input></td><td><input id="d34" class="hook" type="text" maxlength="1" value=""></input></td><td><input id="d35" class="hook" type="text" maxlength="1" value=""></input></td><td><input id="d36" class="hook" type="text" maxlength="1" value=""></input></td><td><input id="d37" class="hook" type="text" maxlength="1" value=""></input></td><td><input id="d38" class="hook" type="text" maxlength="1" value=""></input></td>
+	    </tr>
+	    <tr>
+			<td><input id="d40" class="hook" type="text" maxlength="1" value=""></input></td><td><input id="d41" class="hook" type="text" maxlength="1" value=""></input></td><td><input id="d42" class="hook" type="text" maxlength="1" value=""></input></td><td><input id="d43" class="hook" type="text" maxlength="1" value=""></input></td><td><input id="d44" class="hook" type="text" maxlength="1" value=""></input></td><td><input id="d45" class="hook" type="text" maxlength="1" value=""></input></td><td><input id="d46" class="hook" type="text" maxlength="1" value=""></input></td><td><input id="d47" class="hook" type="text" maxlength="1" value=""></input></td><td><input id="d48" class="hook" type="text" maxlength="1" value=""></input></td>
+	    </tr>
+	    <tr>
+			<td><input id="d50" class="hook" type="text" maxlength="1" value=""></input></td><td><input id="d51" class="hook" type="text" maxlength="1" value=""></input></td><td><input id="d52" class="hook" type="text" maxlength="1" value=""></input></td><td><input id="d53" class="hook" type="text" maxlength="1" value=""></input></td><td><input id="d54" class="hook" type="text" maxlength="1" value=""></input></td><td><input id="d55" class="hook" type="text" maxlength="1" value=""></input></td><td><input id="d56" class="hook" type="text" maxlength="1" value=""></input></td><td><input id="d57" class="hook" type="text" maxlength="1" value=""></input></td><td><input id="d58" class="hook" type="text" maxlength="1" value=""></input></td>
+	    </tr>
+	    <tr>
+			<td><input id="d60" class="hook" type="text" maxlength="1" value=""></input></td><td><input id="d61" class="hook" type="text" maxlength="1" value=""></input></td><td><input id="d62" class="hook" type="text" maxlength="1" value=""></input></td><td><input id="d63" class="hook" type="text" maxlength="1" value=""></input></td><td><input id="d64" class="hook" type="text" maxlength="1" value=""></input></td><td><input id="d65" class="hook" type="text" maxlength="1" value=""></input></td><td><input id="d66" class="hook" type="text" maxlength="1" value=""></input></td><td><input id="d67" class="hook" type="text" maxlength="1" value=""></input></td><td><input id="d68" class="hook" type="text" maxlength="1" value=""></input></td>
+	    </tr>
+	    <tr>
+			<td><input id="d70" class="hook" type="text" maxlength="1" value=""></input></td><td><input id="d71" class="hook" type="text" maxlength="1" value=""></input></td><td><input id="d72" class="hook" type="text" maxlength="1" value=""></input></td><td><input id="d73" class="hook" type="text" maxlength="1" value=""></input></td><td><input id="d74" class="hook" type="text" maxlength="1" value=""></input></td><td><input id="d75" class="hook" type="text" maxlength="1" value=""></input></td><td><input id="d76" class="hook" type="text" maxlength="1" value=""></input></td><td><input id="d77" class="hook" type="text" maxlength="1" value=""></input></td><td><input id="d78" class="hook" type="text" maxlength="1" value=""></input></td>
+	    </tr>
+	    <tr>
+			<td><input id="d80" class="hook" type="text" maxlength="1" value=""></input></td><td><input id="d81" class="hook" type="text" maxlength="1" value=""></input></td><td><input id="d82" class="hook" type="text" maxlength="1" value=""></input></td><td><input id="d83" class="hook" type="text" maxlength="1" value=""></input></td><td><input id="d84" class="hook" type="text" maxlength="1" value=""></input></td><td><input id="d85" class="hook" type="text" maxlength="1" value=""></input></td><td><input id="d86" class="hook" type="text" maxlength="1" value=""></input></td><td><input id="d87" class="hook" type="text" maxlength="1" value=""></input></td><td><input id="d88" class="hook" type="text" maxlength="1" value=""></input></td>
+	    </tr>
+	</table>
+</div>
+
+<div>
+	<button type="button" onclick="stopCount(); mySubmission()">Submit</button>
+	<button type="button" onclick="myQuit()">Quit</button>
+</div>
+
+</body>
